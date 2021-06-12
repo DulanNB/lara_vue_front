@@ -1,7 +1,7 @@
 require('./bootstrap');
 import Vue from 'vue'
 window.Vue = require('vue');
-axios.defaults.baseURL = 'http://127.0.0.1:8000';
+
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -16,18 +16,18 @@ Vue.use(VueAxios, axios);
 
 const routes = [
 
-  {
-    name:'/',
-    path:'/',
-    component: Home
-  },
-  {
-    name:'/contacts',
-    path:'/contacts',
-    component: ContactList
-  }
+    {
+        name:'/',
+        path:'/',
+        component: Home
+    },
+    {
+        name:'/contacts',
+        path:'/contacts',
+        component: ContactList
+    }
 ]
 
 const router = new VueRouter({mode:'history',routes:routes});
 
- new Vue(Vue.util.extend({router},App)).$mount('#app');
+const app = new Vue(Vue.util.extend({router},App)).$mount('#app');
