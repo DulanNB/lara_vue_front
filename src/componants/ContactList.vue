@@ -34,7 +34,7 @@ export default {
             //let url = '/api/getContacts';
             this.axios.get('/api/getContacts').then(response => {
                 this.contacts = response.data
-                console.log(response.data)
+                console.log(process.env.VUE_APP_BASE_URL)
             });
         }
         },

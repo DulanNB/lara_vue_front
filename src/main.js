@@ -1,7 +1,7 @@
 require('./bootstrap');
 import Vue from 'vue'
 window.Vue = require('vue');
-axios.defaults.baseURL = 'http://127.0.0.1:8000';
+
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -11,6 +11,8 @@ import  ContactList from './componants/ContactList.vue';
 
 import VueAxios from 'vue-axios';
 import axios from 'axios';
+
+axios.defaults.baseURL = process.env.VUE_APP_BASE_URL
 
 Vue.use(VueAxios, axios);
 
