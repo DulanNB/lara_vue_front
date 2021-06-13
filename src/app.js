@@ -17,13 +17,13 @@ Vue.use(VueAxios, axios);
 const routes = [
 
     {
-        name:'/',
-        path:'/',
+        name:'/home',
+        path:'/home',
         component: Home
     },
     {
         name:'/contacts',
-        path:'/contacts',
+        path:'/',
         component: ContactList
     }
 ]
